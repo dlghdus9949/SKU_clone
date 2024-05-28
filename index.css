@@ -1,0 +1,27 @@
+
+.head-flex{
+    display: flex;
+    justify-content: end;
+}
+
+.head{
+    background-color: #003956;
+    padding: 0 20px;
+    size: 1456 40px;
+    width: 200vh;
+}
+
+.nav1-button{
+    font-size: 18px;
+    color: white;
+    min-width: 120px;
+    height: 40px;
+    padding: none;
+}
+
+.nav1-earth{
+    color: white; 
+    background-color: rgba(0, 0, 0, 0); 
+    border: none;
+    font-size: 18px;
+}
