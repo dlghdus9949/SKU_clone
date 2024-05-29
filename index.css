@@ -1,25 +1,22 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 87eb60059c00a03d2247cefae6ac1e844d7f12cc
-.head-flex{
-    display: flex;
-    justify-content: end;
+.earth-position{
+    position: relative;
+    right: -110vh;
 }
 
 .head{
     background-color: #003956;
-    padding: 0 20px;
-    size: 1456 40px;
+    padding-left: 11.5vh;
     width: 200vh;
+    height: 45px;
 }
 
 .nav1-button{
-    font-size: 18px;
+    font-size: 30px;
     color: white;
     min-width: 120px;
-    height: 40px;
-    padding: none;
+    height: 100px;
+    padding: 0;
+    width: 140px;
 }
 
 .nav1-earth{
@@ -27,8 +24,54 @@
     background-color: rgba(0, 0, 0, 0); 
     border: none;
     font-size: 18px;
-<<<<<<< HEAD
+    padding-top: 10px;
+    
 }
-=======
+
+.nav2-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
 }
->>>>>>> 87eb60059c00a03d2247cefae6ac1e844d7f12cc
+
+.nav2-index{
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(1, 0, 0, 0);
+}
+
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+a:visited{
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover{
+    text-decoration-line: none;
+}
+
+
+.nav2-flex{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.button1{
+    display: block;
+    float: left;
+    min-width: 120px;
+    height: 45px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Noto Light';
+    font-size: 17px;
+    color: #fff;
+    width: 130px;
+}
