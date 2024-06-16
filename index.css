@@ -1,12 +1,36 @@
+.wrap-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    font-size: 0;
+}
+
+.button1{
+    display: block;
+    float: left;
+    min-width: 120px;
+    height: 45px;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Noto Light';
+    font-size: 17px;
+    color: #fff;
+    width: 130px;
+}
+
 .earth-position{
     position: relative;
-    right: -110vh;
+    right: -120vh;
+    
 }
 
 .head{
     background-color: #003956;
     padding-left: 11.5vh;
-    width: 200vh;
+    width: 190.1vh;
     height: 45px;
 }
 
@@ -28,25 +52,58 @@
     
 }
 
+.nav2-flex{
+    display: flex;
+    justify-content: center;
+}
+
 .nav2-container {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
+    width: 190.1vh;
+    max-width: 1080;
+    height: 130px;
+    color: white;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    transition: .4s;
+    box-sizing: border-box;
+}
+
+.nav2-sungkyulimg{
+    padding-top: 40px;
+    position: relative;
+    left: 120px;
+    width: 400px;
+    height: 400px;
+}
+
+.nav2-sungkyulimg img{
+    width: 240px;
+    height: auto;
+}
+
+.nav2-sungkyulimg img.blue {
+    filter: brightness(0.7) hue-rotate(180deg);
 }
 
 .nav2-index{
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(1, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    font-size: 21px;
+}
+
+.search-icon.blue, .search-icon.blue i {
+    color: blue;
 }
 
 a{
-    color: black;
+    color: white;
     text-decoration-line: none;
 }
 
 a:visited{
-    color: black;
+    color: white;
     text-decoration-line: none;
 }
 
@@ -54,24 +111,21 @@ a:hover{
     text-decoration-line: none;
 }
 
-
-.nav2-flex{
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+.dot-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 10px);
+    grid-template-rows: repeat(3, 10px);
 }
 
+.dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
 
-.button1{
-    display: block;
-    float: left;
-    min-width: 120px;
-    height: 45px;
-    padding: 0 10px;
-    line-height: 40px;
-    text-align: center;
-    font-family: 'Noto Light';
-    font-size: 17px;
-    color: #fff;
-    width: 130px;
+.dot-posi{
+    position: relative;
+    right: 20px;
+    padding-top: 30px;
 }
