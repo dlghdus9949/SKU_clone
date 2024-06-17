@@ -27,11 +27,15 @@
     
 }
 
-.head{
+.head {
     background-color: #003956;
     padding-left: 11.5vh;
     width: 190.1vh;
     height: 45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
 }
 
 .nav1-button{
@@ -43,13 +47,47 @@
     width: 140px;
 }
 
-.nav1-earth{
-    color: white; 
-    background-color: rgba(0, 0, 0, 0); 
+.nav1-earth {
+    color: white;
+    background-color: #003956;
     border: none;
     font-size: 18px;
-    padding-top: 10px;
-    
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav1-earth i {
+    margin-right: 5px;
+}
+
+.nav-hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #003956;
+    position: absolute;
+    top: 100%;
+    right: 83px;
+    z-index: 1;
+    width: 100px; 
+    border: 1px solid black;
+    padding: 10px;
+    padding-top: 0;
+    color: white;
+}
+
+.nav-hamburger-menu a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 15px;
+    color: white;
+    border-top: 1px solid black;
+}
+
+.nav-hamburger-menu a:hover {
+    background-color: #004b72;
+    border: black;
+    color: white;
 }
 
 .nav2-flex{
@@ -86,11 +124,68 @@
     filter: brightness(0.7) hue-rotate(180deg);
 }
 
-.nav2-index{
+.nav2-index {
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
     font-size: 21px;
+}
+
+.nav2-index a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+}
+
+.nav2-index a span {
+    position: relative;
+    z-index: 1;
+}
+
+.nav2-index a::after,
+.nav2-index a .underline {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 0;
+    height: 5px; 
+    background-color: #2247a6;
+    transition: width 0.3s;
+}
+
+.nav2-index a:hover::after,
+.nav2-index a:hover .underline {
+    width: 100%; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: black;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    top: 40px;
+}
+
+.nav2-index a:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
 .search-icon.blue, .search-icon.blue i {
@@ -109,6 +204,47 @@ a:visited{
 
 a:hover{
     text-decoration-line: none;
+}
+
+.search-icon-click {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #0095e0;
+    padding: 45px 0 85px 0;
+    margin-bottom: 45px;
+    text-align: center;
+    height: 200px;
+}
+
+.search-icon-click-bg {
+    position: relative;
+    display: inline-block;
+    background: white;
+    border-radius: 50px;
+    width: 770px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.search-icon-click-bg input {
+    width: calc(100% - 40px);
+    padding: 0 20px; 
+    border: none; 
+    height: 100%; 
+    outline: none; 
+    font-size: 18px; 
+    background: transparent; 
+}
+
+.search-icon-click-icon {
+    position: absolute; 
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    color: black;
+    font-size: 30px;
 }
 
 .dot-grid{
