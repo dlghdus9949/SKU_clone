@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownButton = document.querySelector('.nav1-earth');
     const dropdownMenu = document.querySelector('.nav-hamburger-menu');
     const navItems = document.querySelectorAll('.nav2-index a:not(.search-icon):not(.dot-grid)');
-    let navSearchIon = document.getElementById("search-icon-click")
-   
+    const navSearchIcon = document.getElementById("search-icon-click");
+
     // 네비게이션 컨테이너에 마우스 이벤트 추가
     navContainer.addEventListener('mouseenter', function() {
         navContainer.style.backgroundColor = 'white';
@@ -48,33 +48,53 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 
-    // nav 글씨에 마우스 올렸을 때 흰색 박스 세부 메뉴
+    // nav 글씨에 마우스 올렸을 때 흰색 박스 세부 메뉴, 파란줄
     navItems.forEach(item => {
-        const spanWidth = item.querySelector('span').offsetWidth;
+        const span = item.querySelector('span');
+        if (span) {
+            const spanWidth = span.offsetWidth;
 
-        item.addEventListener('mouseenter', function() {
-            const underline = item.querySelector('.underline'); 
-            if (underline) {
-                underline.style.width = `${spanWidth}px`; 
-            }
-            
-            const dropdown = this.querySelector('.dropdown-content');
-            if (dropdown) {
-                dropdown.style.display = 'block';
-            }
-        });
+            item.addEventListener('mouseenter', function() {
+                const underline = item.querySelector('.underline'); 
+                if (underline) {
+                    underline.style.width = `${spanWidth}px`; 
+                }
 
-        item.addEventListener('mouseleave', function() {
-            const dropdown = this.querySelector('.dropdown-content');
-            if (dropdown) {
-                dropdown.style.display = 'none';
-            }
-        });
+                const dropdown = this.querySelector('.dropdown-content');
+                if (dropdown) {
+                    dropdown.style.display = 'block';
+                }
+            });
+
+            item.addEventListener('mouseleave', function() {
+                const dropdown = this.querySelector('.dropdown-content');
+                if (dropdown) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
     });
-});
 
-function searchClick(){
-    if(navSearchIon.style.display === "none"){
-        navSearchIon.style.display = "flex"
-    };
-}
+    // 돋보기를 클릭하면 검색박스 표시, 숨김
+    searchIcon.addEventListener('click', function(event) {
+        event.stopPropagation();
+        if (navSearchIcon.style.display === 'flex') {
+            navSearchIcon.style.display = 'none';
+        } else {
+            navSearchIcon.style.display = 'flex';
+        }
+    });
+
+    // 다른 곳을 클릭하면 검색박스 숨김
+    document.addEventListener('click', function() {
+        navSearchIcon.style.display = 'none';
+    });
+
+    navSearchIcon.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+    //nav 글씨에 마우스 올리면 세부 사항들 표시
+    
+    
+});
