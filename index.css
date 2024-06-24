@@ -7,7 +7,7 @@
     font-size: 0;
 }
 
-.button1{
+.button1 {
     display: block;
     float: left;
     min-width: 120px;
@@ -21,10 +21,9 @@
     width: 130px;
 }
 
-.earth-position{
+.earth-position {
     position: relative;
     right: -120vh;
-    
 }
 
 .head {
@@ -38,7 +37,7 @@
     color: white;
 }
 
-.nav1-button{
+.nav1-button {
     font-size: 30px;
     color: white;
     min-width: 120px;
@@ -69,7 +68,7 @@
     top: 100%;
     right: 83px;
     z-index: 1;
-    width: 100px; 
+    width: 100px;
     border: 1px solid black;
     padding: 10px;
     padding-top: 0;
@@ -90,7 +89,7 @@
     color: white;
 }
 
-.nav2-flex{
+.nav2-flex {
     display: flex;
     justify-content: center;
 }
@@ -107,7 +106,7 @@
     box-sizing: border-box;
 }
 
-.nav2-sungkyulimg{
+.nav2-sungkyulimg {
     padding-top: 40px;
     position: relative;
     left: 120px;
@@ -115,7 +114,7 @@
     height: 400px;
 }
 
-.nav2-sungkyulimg img{
+.nav2-sungkyulimg img {
     width: 240px;
     height: auto;
 }
@@ -133,14 +132,10 @@
 
 .nav2-index a {
     position: relative;
+    z-index: 1;
     text-decoration: none;
     color: white;
     padding: 10px 15px;
-}
-
-.nav2-index a span {
-    position: relative;
-    z-index: 1;
 }
 
 .nav2-index a::after,
@@ -150,14 +145,14 @@
     left: 0;
     bottom: 30px;
     width: 0;
-    height: 5px; 
+    height: 5px;
     background-color: #2247a6;
     transition: width 0.3s;
 }
 
 .nav2-index a:hover::after,
 .nav2-index a:hover .underline {
-    width: 100%; 
+    width: 100%;
 }
 
 .dropdown-content {
@@ -188,21 +183,39 @@
     background-color: #f1f1f1;
 }
 
-.search-icon.blue, .search-icon.blue i {
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+.dropdown-content ul li {
+    padding: 8px 12px;
+}
+.dropdown-content ul li:hover {
+    background-color: #ddd;
+}
+.nav2-index {
+    position: relative; /* 네비게이션 바 아래에 드롭다운 박스를 위치시키기 위해 */
+}
+.dropdown-content {
+    top: 100%; /* 성결소개 항목 아래에 위치하도록 설정 */
+    left: 0;
+}
+.search-icon.blue,
+.search-icon.blue i {
     color: blue;
 }
 
-a{
+a {
     color: white;
     text-decoration-line: none;
 }
 
-a:visited{
+a:visited {
     color: white;
     text-decoration-line: none;
 }
 
-a:hover{
+a:hover {
     text-decoration-line: none;
 }
 
@@ -230,38 +243,51 @@ a:hover{
 
 .search-icon-click-bg input {
     width: calc(100% - 40px);
-    padding: 0 20px; 
-    border: none; 
-    height: 100%; 
-    outline: none; 
-    font-size: 18px; 
-    background: transparent; 
+    padding: 0 20px;
+    border: none;
+    height: 100%;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
 }
 
 .search-icon-click-icon {
-    position: absolute; 
-    right: 20px; 
-    top: 50%; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
     transform: translateY(-50%);
     color: black;
     font-size: 30px;
 }
 
-.dot-grid{
+.dot-grid {
     display: grid;
     grid-template-columns: repeat(3, 10px);
     grid-template-rows: repeat(3, 10px);
 }
 
-.dot{
+.dot {
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background-color: white;
 }
 
-.dot-posi{
+.dot-posi {
     position: relative;
     right: 20px;
     padding-top: 30px;
+}
+
+.nav-HiddenText-index {
+    position: absolute;
+    box-sizing: border-box;
+    color: black;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(235, 242, 252, .97);
+    text-align: left;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    top: 99.9%;
 }

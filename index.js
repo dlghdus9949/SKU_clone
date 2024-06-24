@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownMenu = document.querySelector('.nav-hamburger-menu');
     const navItems = document.querySelectorAll('.nav2-index a:not(.search-icon):not(.dot-grid)');
     const navSearchIcon = document.getElementById("search-icon-click");
+    const dropdownText = document.querySelector('.nav-HiddenText-index');
+    const skuintro = document.getElementById('skuintro');
+    const dropdownContent = document.querySelector('.dropdown-content'); // 수정된 부분: 올바른 드롭다운 박스 선택자
 
     // 네비게이션 컨테이너에 마우스 이벤트 추가
     navContainer.addEventListener('mouseenter', function() {
@@ -94,7 +97,36 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 
-    //nav 글씨에 마우스 올리면 세부 사항들 표시
-    
-    
+    // "성결소개" 항목에 마우스를 올리면 세부 사항들 표시
+    skuintro.addEventListener('mouseenter', function() {
+        dropdownText.style.display = 'grid';
+    });
+
+    skuintro.addEventListener('mouseleave', function() {
+        setTimeout(() => {
+            if (!dropdownText.matches(':hover')) {
+                dropdownText.style.display = 'none';
+            }
+        }, 200); // 작은 지연 시간 추가
+    });
+
+       // "성결소개" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
+            skuintro.addEventListener('mouseenter', function() {
+                dropdownContent.style.display = 'block';
+            });
+        
+            // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
+            dropdownContent.addEventListener('mouseleave', function() {
+                dropdownContent.style.display = 'none';
+            });
+        
+            // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
+            dropdownContent.addEventListener('mouseenter', function() {
+                dropdownContent.style.display = 'block';
+            });
+        
+            // "성결소개" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
+            skuintro.addEventListener('mouseleave', function() {
+                dropdownContent.style.display = 'none';
+            });
 });
