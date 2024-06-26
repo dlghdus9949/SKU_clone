@@ -738,16 +738,22 @@ video {
 }
 
 .obj2 .control .prev {
-  background: url(./image/prev.png) no-repeat center center;
+  background: url(/image/prev.png) no-repeat center center;
+  width: 10px;
+  height: 16px;
 }
 
 .obj2 .control .stop {
-  background: url(./image/stop.png) no-repeat center center;
+  background: url(/image/stop.png) no-repeat center center;
+  width: 10px;
+  height: 16px;
   margin: 0 10px;
 }
 
 .obj2 .control .next {
-  background: url(./image/next.png) no-repeat center center;
+  background: url(/image/next.png) no-repeat center center;
+  width: 10px;
+  height: 16px;
 }
 
 .obj2 button {
@@ -1005,16 +1011,22 @@ video {
 }
 
 .obj4 .control .prev {
-  background: url(./image/ico-about-prev.png) no-repeat center center;
+  background: url(/image/ico-about-prev.png) no-repeat center center;
+  width: 10px;
+  height: 16px;
 }
 
 .obj4 .control .stop {
-  background: url(./image/ico-about-play.png) no-repeat center center;
+  background: url(/image/ico-about-play.png) no-repeat center center;
   margin: 0 10px;
+  width: 10px;
+  height: 16px;
 }
 
 .obj4 .control .next {
-  background: url(./image/ico-about-next.png) no-repeat center center;
+  background: url(/image/ico-about-next.png) no-repeat center center;
+  width: 10px;
+  height: 16px;
 }
 /* 호연 */
 
