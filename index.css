@@ -66,7 +66,7 @@
     background-color: #003956;
     position: absolute;
     top: 100%;
-    right: 83px;
+    right: 19px;
     z-index: 1;
     width: 100px;
     border: 1px solid black;
@@ -169,7 +169,8 @@
     text-align: left;
     display: none;
     padding: 20px; /* 내용 여백 설정 */
-    left: 0px;
+    left: 90px;
+    top: 1px;
     display: grid;
    grid-template-columns: repeat(5, 1fr);
 }
@@ -184,8 +185,8 @@
     z-index: 1;
     padding: 10px;
     border-radius: 5px;
-    top: 130px;  /*text 박스 위치 */
-   left: -570px;
+    top: 131px;  /*text 박스 위치 */
+   left: -575px;
 }
 
 .dropdown-content a {
@@ -193,10 +194,6 @@
     padding: 8px 16px;
     text-decoration: none;
     display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
 }
 
 .dropdown-content ul{
@@ -207,11 +204,6 @@
      padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-
-
-.dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 .col-dropdown-content {
@@ -235,9 +227,6 @@
     display: block;
 }
 
-.col-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
 
 .col-dropdown-content ul {
     padding-bottom: 30px;
@@ -247,9 +236,6 @@
     padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-.col-dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 .enter-dropdown-content {
@@ -273,10 +259,6 @@
     display: block;
 }
 
-.enter-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
 .enter-dropdown-content ul {
     padding-bottom: 30px;
     font-size: 20px; 
@@ -285,9 +267,6 @@
     padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-.enter-dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 .life-dropdown-content {
@@ -311,10 +290,6 @@
     display: block;
 }
 
-.life-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
 .life-dropdown-content ul {
     padding-bottom: 30px;
     font-size: 20px; 
@@ -323,9 +298,6 @@
     padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-.life-dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 .ser-dropdown-content {
@@ -349,9 +321,6 @@
     display: block;
 }
 
-.ser-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
 
 .ser-dropdown-content ul {
     padding-bottom: 30px;
@@ -361,9 +330,6 @@
     padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-.ser-dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 .place-dropdown-content {
@@ -387,9 +353,6 @@
     display: block;
 }
 
-.place-dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
 
 .place-dropdown-content ul{
     padding-bottom: 30px;
@@ -399,11 +362,6 @@
      padding-top: 10px;
      list-style-type: square;
      font-size: 15px;
-}
-
-
-.place-dropdown-content ul li:hover {
-    background-color: #ddd;
 }
 
 
@@ -755,8 +713,8 @@ video {
 .obj2 .white .box li {
   display: inline-block;
   text-align: center;
-  margin-right: 15px;
-  width: 85px;
+  margin-right: 30px;
+  width: 100px;
 }
 
 .obj2 .white .box ul {
