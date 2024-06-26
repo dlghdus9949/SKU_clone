@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function() {
     const navContainer = document.querySelector('.nav2-container');
     const sungkyulImg = document.querySelector('.nav2-sungkyulimg img');
@@ -16,13 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const collife = document.getElementById('collife');
     const service = document.getElementById('service');
     const place = document.getElementById('place');
-    const dropdownContent = document.querySelector('.dropdown-content'); // 실제 사용하는 드롭다운 박스 선택자로 수정
+    const dropdownContent = document.querySelector('.dropdown-content');
     const SerdropdownContent = document.querySelector('.ser-dropdown-content');
     const LifedropdownContent = document.querySelector('.life-dropdown-content');
     const EnterdropdownContent = document.querySelector('.enter-dropdown-content');
     const ColdropdownContent = document.querySelector('.col-dropdown-content');
     const placedropdownContent = document.querySelector('.place-dropdown-content');
-
 
     // 네비게이션 컨테이너에 마우스 이벤트 추가
     navContainer.addEventListener('mouseenter', function() {
@@ -111,76 +109,54 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 
-    /////글씨 올렸을 때 세부항목
-
+    // "성결소개" 항목
     skuintro.addEventListener('mouseenter', function() {
         dropdownText.style.display = 'grid';
+        dropdownContent.style.display = 'block';
     });
 
     skuintro.addEventListener('mouseleave', function() {
         setTimeout(() => {
-            if (!dropdownText.matches(':hover')) {
-                dropdownText.style.display = 'none';
+            if (!dropdownContent.matches(':hover')) {
+                dropdownContent.style.display = 'none';
             }
         }, 200);
     });
 
-    // "성결소개" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    skuintro.addEventListener('mouseenter', function() {
-        dropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    dropdownContent.addEventListener('mouseleave', function() {
-        dropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     dropdownContent.addEventListener('mouseenter', function() {
         dropdownContent.style.display = 'block';
     });
 
-    // "성결소개" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    skuintro.addEventListener('mouseleave', function() {
+    dropdownContent.addEventListener('mouseleave', function() {
         dropdownContent.style.display = 'none';
     });
 
     // "대학/대학원" 항목
     col.addEventListener('mouseenter', function() {
         dropdownText.style.display = 'grid';
+        ColdropdownContent.style.display = 'block';
     });
 
     col.addEventListener('mouseleave', function() {
         setTimeout(() => {
-            if (!dropdownText.matches(':hover')) {
-                dropdownText.style.display = 'none';
+            if (!ColdropdownContent.matches(':hover')) {
+                ColdropdownContent.style.display = 'none';
             }
         }, 200);
     });
 
-    // "대학/대학원" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    col.addEventListener('mouseenter', function() {
-        ColdropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    ColdropdownContent.addEventListener('mouseleave', function() {
-        ColdropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     ColdropdownContent.addEventListener('mouseenter', function() {
         ColdropdownContent.style.display = 'block';
     });
 
-    // "대학/대학원" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    col.addEventListener('mouseleave', function() {
+    ColdropdownContent.addEventListener('mouseleave', function() {
         ColdropdownContent.style.display = 'none';
     });
 
     // "입학안내" 항목
     entercol.addEventListener('mouseenter', function() {
         EnterdropdownContent.style.display = 'grid';
+        EnterdropdownContent.style.display = 'block';
     });
 
     entercol.addEventListener('mouseleave', function() {
@@ -191,29 +167,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200);
     });
 
-    // "입학안내" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    entercol.addEventListener('mouseenter', function() {
-        EnterdropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    EnterdropdownContent.addEventListener('mouseleave', function() {
-        EnterdropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     EnterdropdownContent.addEventListener('mouseenter', function() {
         EnterdropdownContent.style.display = 'block';
     });
 
-    // "입학안내" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    entercol.addEventListener('mouseleave', function() {
+    EnterdropdownContent.addEventListener('mouseleave', function() {
         EnterdropdownContent.style.display = 'none';
     });
 
     // "대학생활" 항목
     collife.addEventListener('mouseenter', function() {
         LifedropdownContent.style.display = 'grid';
+        LifedropdownContent.style.display = 'block';
     });
 
     collife.addEventListener('mouseleave', function() {
@@ -224,29 +189,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 200);
     });
 
-    // "대학생활" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    collife.addEventListener('mouseenter', function() {
-        LifedropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    LifedropdownContent.addEventListener('mouseleave', function() {
-        LifedropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     LifedropdownContent.addEventListener('mouseenter', function() {
         LifedropdownContent.style.display = 'block';
     });
 
-    // "대학생활" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    collife.addEventListener('mouseleave', function() {
+    LifedropdownContent.addEventListener('mouseleave', function() {
         LifedropdownContent.style.display = 'none';
     });
 
     // "서비스" 항목
     service.addEventListener('mouseenter', function() {
         SerdropdownContent.style.display = 'grid';
+        SerdropdownContent.style.display = 'block';
     });
 
     service.addEventListener('mouseleave', function() {
@@ -257,30 +211,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 400);
     });
 
-    // "서비스" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    service.addEventListener('mouseenter', function() {
-        SerdropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    SerdropdownContent.addEventListener('mouseleave', function() {
-        SerdropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     SerdropdownContent.addEventListener('mouseenter', function() {
         SerdropdownContent.style.display = 'block';
     });
 
-    // "서비스" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    service.addEventListener('mouseleave', function() {
+    SerdropdownContent.addEventListener('mouseleave', function() {
         SerdropdownContent.style.display = 'none';
     });
-
 
     // "광장" 항목
     place.addEventListener('mouseenter', function() {
         placedropdownContent.style.display = 'grid';
+        placedropdownContent.style.display = 'block';
     });
 
     place.addEventListener('mouseleave', function() {
@@ -291,27 +233,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 400);
     });
 
-    // "place" 항목에 마우스를 올렸을 때 드롭다운 박스 표시
-    place.addEventListener('mouseenter', function() {
-        placedropdownContent.style.display = 'block';
-    });
-
-    // 마우스를 드롭다운 박스 바깥으로 이동했을 때 숨김
-    placedropdownContent.addEventListener('mouseleave', function() {
-        placedropdownContent.style.display = 'none';
-    });
-
-    // 추가적으로, 드롭다운 박스에 마우스를 올렸을 때도 드롭다운 박스가 유지되어야 합니다.
     placedropdownContent.addEventListener('mouseenter', function() {
         placedropdownContent.style.display = 'block';
     });
 
-    // "서비스" 항목에 마우스를 떠났지만, 드롭다운 박스에 마우스를 올리면 다시 표시됩니다.
-    place.addEventListener('mouseleave', function() {
+    placedropdownContent.addEventListener('mouseleave', function() {
         placedropdownContent.style.display = 'none';
     });
 });
-=======
+
 // 호연
 $(document).ready(function () {
   // Slick 슬라이더 초기화
@@ -399,4 +329,59 @@ $(document).ready(function () {
   startSlideShow();
 });
 // 호연
->>>>>>> 호연
+
+var footmainButton = document.getElementById('mainButton');
+var footselect = document.querySelectorAll('.main-site select'); // 변경: querySelector -> querySelectorAll
+
+if (footmainButton) {
+    footmainButton.addEventListener('click', function() {
+        footmainButton.style.backgroundColor = 'black';
+        footselect.forEach(function(select) { // forEach를 사용하여 각 select 요소에 접근
+            select.style.color = 'white';
+        });
+    });
+} else {
+    console.error('footmainButton not found');
+}
+
+/* 배너 */
+const scrollMenu = document.getElementById('scrollMenu');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+let scrollInterval;
+let isPaused = false;
+
+prevBtn.addEventListener('click', () => {
+    scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+    scrollMenu.scrollBy({ left: 200, behavior: 'smooth' });
+});
+
+pauseBtn.addEventListener('click', () => {
+    if (isPaused) {
+        startScrolling();
+        pauseBtn.textContent = '❚❚';
+    } else {
+        stopScrolling();
+        pauseBtn.textContent = '▶';
+    }
+    isPaused = !isPaused;
+});
+
+function startScrolling() {
+    scrollInterval = setInterval(() => {
+        scrollMenu.scrollBy({ left: 2, behavior: 'smooth' });
+        if (scrollMenu.scrollLeft + scrollMenu.clientWidth >= scrollMenu.scrollWidth) {
+            scrollMenu.scrollLeft = 0;
+        }
+    }, 50);
+}
+
+function stopScrolling() {
+    clearInterval(scrollInterval);
+}
+
+startScrolling();
