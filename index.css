@@ -416,17 +416,17 @@
     color: blue !important;
 }
 
-a {
+.wrap-header a {
     color: white;
     text-decoration-line: none;
 }
 
-a:visited {
+.wrap-header a:visited {
     color: white;
     text-decoration-line: none;
 }
 
-a:hover {
+.wrap-header a:hover {
     text-decoration-line: none;
 }
 
