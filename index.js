@@ -1,3 +1,4 @@
+// 호연
 $(document).ready(function () {
   // Slick 슬라이더 초기화
   $(".slick-track").slick({
@@ -83,3 +84,4 @@ $(document).ready(function () {
   // 슬라이드 쇼 시작
   startSlideShow();
 });
+// 호연
