@@ -1,0 +1,567 @@
+* {
+  box-sizing: border-box;
+}
+
+a:link,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  word-break: keep-all;
+}
+
+.wrap_video {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+}
+
+/* SECTION2 */
+.section2 {
+  background-image: url(./image/bg-info.jpg);
+  height: 850px;
+  width: 100%;
+  background-size: cover;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 70px 20px;
+}
+
+.obj {
+  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+}
+
+/*학사*/
+.obj1wrap {
+  position: relative;
+  padding-right: 30px;
+}
+
+.obj1wrap.first > ul:after {
+  width: 92%;
+}
+
+.obj1wrap > ul::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 90%;
+  height: 50px;
+  background: #003956;
+}
+
+.obj1wrap > ul {
+  position: relative;
+  height: 375px;
+}
+
+.tab-list {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.tab-list .tab-list:first-child.on .tab {
+  margin-left: 0;
+}
+
+.tab-list.on .tab span {
+  position: relative;
+  /* top: -7px; */
+  z-index: 1;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transform: translate(45%, 0);
+}
+
+.tab-list.on .tab span::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 70px;
+  height: 66px;
+  background: #c71514;
+  transform: translate(-40%, 0) skew(-25deg);
+  z-index: -1;
+}
+
+.tab-list.on .contents {
+  display: block;
+}
+
+.tab-list .contents {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+}
+
+.tab-list .contents > ul {
+  list-style: none;
+}
+
+.tab-list .con-list .sub a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 7px;
+  height: 2px;
+  background: #a8a8a8;
+  z-index: 30;
+}
+
+.tab-list .con-list.notice .sub a::after {
+  top: 18px;
+  width: 25px;
+  height: 25px;
+  background: transparent url(./image/ico-notice.png) no-repeat center center;
+  padding-left: 80px;
+}
+
+.tab-list .con-list {
+  position: relative;
+  background: #fff;
+  transition: 0.4s;
+}
+
+.tab-list .con-list:hover::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  width: 3px;
+  height: 100%;
+  background: #c71513;
+  position: absolute;
+  transition: 0.7s;
+}
+
+.tab-list .con-list:hover strong {
+  color: #c71513; /* 호버 시 글자 색상 변경 */
+}
+
+.tab-list .con-list .desc {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: 21px 35px 21px 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tab-list .con-list .sub {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.tab-list .con-list .sub a {
+  padding-left: 35px;
+}
+
+.tab-list .con-list .sub strong {
+  overflow: hidden;
+}
+
+.tab-list .con-list .date {
+  display: table-cell;
+  width: 80px;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 16px;
+  color: #656565;
+}
+
+.tab-list.on .more {
+  display: block;
+  z-index: 11;
+}
+
+.tab-list .more {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  background: #295ca4 url(./image/ico-notice-more.png) no-repeat center center;
+  text-indent: -9999px;
+}
+
+.obj1wrap .tab-list .tab {
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  padding: 0 19px;
+  line-height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+/*자주찾는 서비스*/
+.obj2 {
+  top: 3%;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.obj2 .white {
+  width: 95%;
+}
+
+.obj2 .white .box .box2 .icon:hover img {
+  transform: rotateY(360deg);
+}
+
+.icon img {
+  transition: transform 0.5s ease; /* transform 속성에 대한 전환 효과 설정 */
+}
+
+.obj2 .white strong {
+  color: black;
+  font-size: 22px;
+}
+
+.obj2 .white .box {
+  padding: 23px 25px 10px 25px;
+  position: relative;
+  background: #f3f9fe url("./image/자주찾는서비스back.png") no-repeat right
+    bottom;
+  border: 15px solid #cad8e3;
+  align-items: center;
+  justify-content: center;
+}
+
+.obj2 .white .box a {
+  text-decoration: none;
+  color: #000;
+}
+
+.obj2 .white .box li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 15px;
+  width: 85px;
+}
+
+.obj2 .white .box ul {
+  display: flex;
+  list-style-type: none;
+  padding-top: 30px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.obj2 .white .box ul div {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.obj2 .control {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 0;
+}
+
+.obj2 .control .prev {
+  background: url(./image/prev.png) no-repeat center center;
+}
+
+.obj2 .control .stop {
+  background: url(./image/stop.png) no-repeat center center;
+  margin: 0 10px;
+}
+
+.obj2 .control .next {
+  background: url(./image/next.png) no-repeat center center;
+}
+
+.obj2 button {
+  width: 10px;
+  overflow: hidden;
+  text-indent: -99999px;
+  border: none;
+}
+
+.box2 .desc {
+  color: #656565;
+  font-size: 15px;
+}
+
+/*학사일정*/
+.obj3 {
+  display: flex;
+}
+
+.obj3 .wrap {
+  padding-top: 55px;
+  padding-right: 30px;
+  padding-left: 40px;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+}
+
+.obj3 .sch {
+  background: url(./image/bg-sch.png);
+  background-size: cover;
+  width: 100%;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+
+.obj3 .sch strong {
+  color: white;
+  position: relative;
+  font-size: 20px;
+}
+
+.obj3 .sch strong::after {
+  content: "";
+  position: absolute;
+  left: 141%;
+  top: 10px;
+  width: 77px;
+  height: 1px;
+  background: #fff;
+}
+
+.obj3 .sch ul {
+  padding-left: 2px;
+  padding-top: 10px;
+}
+
+.obj3 .wrap2 {
+  display: flex;
+  width: 630px;
+}
+
+.obj3 .wrap2 .info {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  padding-bottom: 20px;
+}
+
+.obj3 .wrap2 .info .date {
+  width: 60px;
+}
+
+.obj3 .wrap2 .info .date span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #275fa8;
+  border-radius: 100%;
+  font-size: 26px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  transform: rotateY(0);
+  transition: 0.65s;
+}
+
+.obj3 .wrap2 .info .date:hover span {
+  transform: rotateY(360deg);
+}
+
+.obj3 .wrap2 .info .desc {
+  padding-left: 80px;
+  display: table-cell;
+  vertical-align: middle;
+  width: 280px;
+}
+
+.obj3 .wrap2 .info .desc .full-date {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+.obj3 .wrap2 .info .desc strong {
+  overflow: hidden;
+  display: block;
+  width: 90%;
+  font-size: 17px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.obj3 .sch .control {
+  position: absolute;
+  right: 50px;
+  top: 70px;
+  font-size: 0;
+}
+
+.obj3 .sch .control button {
+  display: inline-block;
+  text-indent: -99999px;
+  border: none;
+}
+
+.obj3 .sch .control .prev {
+  background: url(./image/sch_prev.png) no-repeat center center;
+}
+
+.obj3 .sch .control .next {
+  background: url(./image/sch_next.png) no-repeat right center;
+  width: 27px;
+  position: relative;
+  padding-left: 17px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+
+.obj3 .sch .control .next:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #7a7876;
+}
+
+.obj3 .sch .control .more {
+  display: inline-block;
+  background: url(./image/sch_more.png) no-repeat center center;
+  width: 12px;
+  height: 20px;
+  top: -13px;
+  position: relative;
+}
+
+/*ABOUT SKU*/
+.obj4 {
+  margin-top: -80px;
+  height: 380px;
+  overflow: hidden;
+  width: 95%;
+}
+
+.obj4 .title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.obj4 ul {
+  /* border: 1px solid #d0d1d3; */
+  padding-left: 0px;
+}
+
+.obj4 .slick-slide,
+.obj4 .slick-slide a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.thumb img {
+  width: auto;
+  height: 330px;
+  object-fit: contain;
+  display: block;
+}
+
+.obj4 .desc {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgba(26, 47, 66, 0.9);
+  font-size: 16px;
+  color: #fff;
+}
+
+.obj4 .desc span {
+  position: relative;
+}
+
+.obj4 .desc span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  transition: 0.4s;
+}
+
+.obj4 .control {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  font-size: 0;
+}
+
+.obj4 .control .count {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.obj4 .control .count span {
+  display: inline-block;
+  color: #000;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.obj4 .control .count .slash {
+  margin: 0 5px;
+}
+
+.obj4 .control .count .total {
+  color: #9299a6;
+}
+
+.obj4 .control button {
+  text-indent: -9999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.obj4 .control .prev {
+  background: url(./image/ico-about-prev.png) no-repeat center center;
+}
+
+.obj4 .control .stop {
+  background: url(./image/ico-about-play.png) no-repeat center center;
+  margin: 0 10px;
+}
+
+.obj4 .control .next {
+  background: url(./image/ico-about-next.png) no-repeat center center;
+}
