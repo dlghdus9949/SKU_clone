@@ -345,12 +345,12 @@ if (footmainButton) {
 }
 
 /* 배너 */
-// const scrollMenu = document.getElementById('scrollMenu');
-// const prevBtn = document.getElementById('prevBtn');
-// const nextBtn = document.getElementById('nextBtn');
-// const pauseBtn = document.getElementById('pauseBtn');
-// let scrollInterval;
-// let isPaused = false;
+const scrollMenu = document.getElementById('scrollMenu');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+let scrollInterval;
+let isPaused = false;
 
 prevBtn.addEventListener('click', () => {
     scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
