@@ -1227,355 +1227,396 @@ body {
 
 
     
-/*소명*/
+/* 메인 섹션 스타일 정의 */
+.main3-container {
+  box-sizing: border-box;    /*요소의 너비와 높이가 padding과 border를 포함하도록 설정*/
+  position: relative; /* 상대 위치 설정 */
+}
+.main3-bg {
+  background: #afc0d2 no-repeat top center; /* 배경색과 이미지 설정 */
+  background-size: cover; /* 배경 이미지 크기 조정 */
+  position: relative; /* 상대 위치 설정 */
+}
+.main3-introimg {
+  position: absolute;
+  top: 200px; /* 위쪽에서 200px 떨어짐 */
+  left: 30px; /* 왼쪽에서 30px 떨어짐 */
+}
+.main3-indeximg {
+  position: absolute;    /*부모 요소를 기준으로 절대 위치를 설정*/
+  width: 516px;
+  height: 396px;
+  min-height: 395px;
+  padding: 26px 25px 54px 45px;
+  background: no-repeat left top;
+  background-size: cover; /*배경 이미지를 요소 전체를 덮도록 조정*/
+  top: 240px;
+  left: 520px;
+  color: white; /* 텍스트 색상 설정 */
+}
+.main3-index-text {
+  position: absolute;
+  top: 100px;
+  padding: 10px 25px 54px 46px;
+  box-sizing: border-box;   /*내부 여백과 테두리를 요소의 전체 크기에 포함*/
+  margin-bottom: 20px;
+}
+/* 메인 섹션 스타일 정의 끝*/
+
+/* 학과 목록 스타일 정의 */
+.main3-index-major ul {
+  display: grid;      /*그리드 레이아웃을 설정*/
+  grid-template-columns: repeat(2, 1fr); /* 2열 그리드 레이아웃 */
+  gap: 10px; /* 아이템 사이의 간격 */
+}
+.main3-index-major li {
+  list-style: none; /* 기본 목록 스타일 제거 */
+}
+.main3-index-major li a {
+  display: inline-block;   /*인라인 블록 요소로 설정*/
+  width: 100%;
+  padding: 10px 20px; /* 내부 여백 설정 */
+  background: #fff; /* 배경색 설정 */
+  border-radius: 100px; /* 모서리 둥글게 */
+  font-family: 'Noto Light';
+  font-size: 15px;
+  color: #222; /* 텍스트 색상 설정 */
+  text-align: center;
+  transition: .4s;
+  text-decoration: none; /* 텍스트 밑줄 제거 */
+}
+.main3-index-major li a:hover {
+  background: #f0f0f0; /* 호버 시 배경색 변경 */
+}
+/* 학과 목록 스타일 정의 끝 */
+
+/* 뉴스박스 스타일 정의 */
+.main3-newsbox {
+  padding: 21px 30px 38px 30px;  /*내부 여백을 각각 설정*/
+  background: rgba(255, 255, 255, 0.6); /* 투명도 있는 배경색 */
+  box-sizing: border-box;
+  text-align: center;
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  right: 100px;
+  top: 220px;
+  overflow-y: auto; /* 세로 스크롤 추가 */
+  overflow-x: hidden; /* 가로 스크롤 제거 */
+}
+.main3-newsbox strong {
+  font-size: 30px;
+  color: #111111;
+  font-weight: bold;  /*폰트를 굵게 설정*/
+}
+.main3-newsbox ul {
+  list-style-type: none;
+  padding: 0;
+}
+.main3-newsbox ul li {
+  display: flex;  /*플렉스 박스로 설정*/
+  justify-content: space-between;  /*자식 요소들을 양쪽 끝으로 정렬*/
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px; /*모서리를 8픽셀 둥글게 설정*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /*박스 그림자를 설정하여 요소에 약간의 깊이*/
+}
+.main3-newsbox ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.main3-newsbox ul li img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;  /*이미지가 비율을 유지하며 요소를 완전히 덮도록 설정*/
+  border-radius: 50%; /* 원형 이미지 */
+}
+.main3-newsbox ul li strong {
+  font-size: 16px;
+  color: #333;
+}
+.main3-newsbox ul li .date-with-img {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #777;
+}
+.main3-newsbox ul li .date-with-img img.bullet-img {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+/* 뉴스박스 스타일 정의 끝 */
+
+/* 캠퍼스 가이드 스타일 정의 */
+.wrap-campus {
+  position: absolute;
+  left: 35px;
+  bottom: 0px;
+  background: rgba(255, 255, 255, 0.8); /* 투명도 있는 배경색 */
+  padding: 20px;
+  border-radius: 10px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /*박스 그림자를 설정하여 요소에 약간의 깊이를 준다.*/
+  background: url(https://www.sungkyul.ac.kr/sites/skukr/images/main/bg-campus.png) no-repeat;
+  width: 1000px;
+  height: 200px;
+}
+.wrap-campus strong {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  left: 50px;
+}
+.list-container {
+  display: flex;
+}
+.wrap-campus ul {
+  list-style-type: none;   /*기본 목록 스타일을 제거*/
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  left: 400px;
+  top: 0px;
+}
+.wrap-campus ul li {
+  margin-right: 50px;
+}
+.wrap-campus ul li:last-child {
+  margin-right: 0;   /*마지막 자식 요소의 오른쪽 외부 여백을 제거*/
+}
+.wrap-campus ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: color 0.3s;  /*텍스트 색상이 0.3초 동안 전환되도록 설정*/
+}
+.wrap-campus ul li a:hover {
+  color: black;
+}
+.wrap-campus-icon-index {
+  width: 160px;
+  height: 186px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /*자식 요소들을 수평 중앙 정렬*/
+  justify-content: center;   /*자식 요소들을 수직 중앙 정렬*/
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;  /*내부 여백과 테두리를 요소의 전체 크기에 포함*/
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+/* 캠퍼스 가이드 스타일 정의 끝 */
 
 /* 해시태그 스타일 정의 */
 .hash-tag-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 200px; /* 텍스트와 해시태그 사이의 간격을 더 띄움 */
-  }
-  .hash-tag {
-    display: flex;
-    gap: 10px;
-  }
-  .hash-tag a {
-    display: inline-block;
-    padding: 7px 15px; /* 내부 여백 설정 */
-    background: #5481b9; /* 배경색 설정 */
-    border-radius: 50px; /* 모서리 둥글게 */
-    font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
-    font-size: 18px; /* 폰트 크기 설정 */
-    color: #fff; /* 텍스트 색상 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    text-decoration: none; /* 텍스트 밑줄 제거 */
-    position: relative;
-    z-index: 1; /* z-index 설정 */
-  }
-  .hash-tag a p {
-    margin: 0; /* p 요소의 기본 여백 제거 */
-  }
-  
-  .title-and-tags {
-    display: flex;
-    align-items: center; /* 텍스트와 해시태그를 수직 중앙 정렬 */
-    gap: 20px; /* 텍스트와 해시태그 사이의 간격 */
-    margin-top: 10px; /* 제목과 해시태그 사이의 간격 추가 */
-  }
-  
-  /* 폰트 스타일 적용 */
-  .noto-sans-kr-Thin {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 100;
-  }
-  .noto-sans-kr-Medium {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 500;
-  }
-  .titillium-web-regular {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 400;
-  }
-  
-  /* 메인 섹션 스타일 정의 */
-  .main3-container {
-    box-sizing: border-box;
-    position: relative; /* 상대 위치 설정 */
-  }
-  .main3-bg {
-    background: #afc0d2 no-repeat top center; /* 배경색과 이미지 설정 */
-    background-size: cover; /* 배경 이미지 크기 조정 */
-    position: relative; /* 상대 위치 설정 */
-  }
-  .main3-introimg {
-    position: absolute;
-    top: 200px; /* 위쪽에서 200px 떨어짐 */
-    left: 30px; /* 왼쪽에서 30px 떨어짐 */
-  }
-  .main3-indeximg {
-    position: absolute;
-    width: 516px;
-    height: 396px;
-    min-height: 395px;
-    padding: 26px 25px 54px 45px;
-    background: no-repeat left top;
-    background-size: cover;
-    top: 240px;
-    left: 520px;
-    color: white; /* 텍스트 색상 설정 */
-  }
-  .main3-index-text {
-    position: absolute;
-    top: 100px;
-    padding: 10px 25px 54px 46px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-  }
-  
-  /* 학과 목록 스타일 정의 */
-  .main3-index-major ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열 그리드 레이아웃 */
-    gap: 10px; /* 아이템 사이의 간격 */
-  }
-  .main3-index-major li {
-    list-style: none; /* 기본 목록 스타일 제거 */
-  }
-  .main3-index-major li a {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 20px; /* 내부 여백 설정 */
-    background: #fff; /* 배경색 설정 */
-    border-radius: 100px; /* 모서리 둥글게 */
-    font-family: 'Noto Light';
-    font-size: 15px;
-    color: #222; /* 텍스트 색상 설정 */
-    text-align: center;
-    transition: .4s;
-    text-decoration: none; /* 텍스트 밑줄 제거 */
-  }
-  .main3-index-major li a:hover {
-    background: #f0f0f0; /* 호버 시 배경색 변경 */
-  }
-  
-  /* 뉴스박스 스타일 정의 */
-  .main3-newsbox {
-    padding: 21px 30px 38px 30px;
-    background: rgba(255, 255, 255, 0.6); /* 투명도 있는 배경색 */
-    box-sizing: border-box;
-    text-align: center;
-    width: 500px;
-    height: 600px;
-    position: absolute;
-    right: 100px;
-    top: 220px;
-    overflow-y: auto; /* 세로 스크롤 추가 */
-    overflow-x: hidden; /* 가로 스크롤 제거 */
-  }
-  .main3-newsbox strong {
-    font-size: 30px;
-    color: #111111;
-    font-weight: bold;
-  }
-  .main3-newsbox ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .main3-newsbox ul li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .main3-newsbox ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  .main3-newsbox ul li img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%; /* 원형 이미지 */
-  }
-  .main3-newsbox ul li strong {
-    font-size: 16px;
-    color: #333;
-  }
-  .main3-newsbox ul li .date-with-img {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    color: #777;
-  }
-  .main3-newsbox ul li .date-with-img img.bullet-img {
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-  }
-  
-  /* 캠퍼스 가이드 스타일 정의 */
-  .wrap-campus {
-    position: absolute;
-    left: 35px;
-    bottom: 0px;
-    background: rgba(255, 255, 255, 0.8); /* 투명도 있는 배경색 */
-    padding: 20px;
-    border-radius: 10px; /* 모서리 둥글게 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: url(https://www.sungkyul.ac.kr/sites/skukr/images/main/bg-campus.png) no-repeat;
-    width: 1000px;
-    height: 200px;
-  }
-  .wrap-campus strong {
-    font-size: 40px;
-    color: white;
-    position: absolute;
-    left: 50px;
-  }
-  .list-container {
-    display: flex;
-  }
-  .wrap-campus ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    position: absolute;
-    left: 400px;
-    top: 0px;
-  }
-  .wrap-campus ul li {
-    margin-right: 50px;
-  }
-  .wrap-campus ul li:last-child {
-    margin-right: 0;
-  }
-  .wrap-campus ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    transition: color 0.3s;
-  }
-  .wrap-campus ul li a:hover {
-    color: black;
-  }
-  .wrap-campus-icon-index {
-    width: 160px;
-    height: 186px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-size: 15px;
-  }
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-  }
-  
-  /* SNS 스타일 정의 */
-  .wrap-sns {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  .wrap-sns .tab-list {
-    list-style-type: none; /* 기본 목록 스타일 제거 */
-  }
-  .wrap-sns .tab-list.on .youtube {
-    background-position: bottom center !important;
-  }
-  .wrap-sns .tab-list .tab.youtube {
-    background: url(/images/main/ico-sns1.png) no-repeat top center;
-  }
-  .wrap-sns .tab-list .tab.naver {
-    background: url(/images/main/ico-sns2.png) no-repeat top center;
-  }
-  .wrap-sns .tab-list .tab.insta {
-    background: url(/images/main/ico-sns4.png) no-repeat top center;
-  }
-  .wrap-sns .tab-list .tab.facebook {
-    background: url(/images/main/ico-sns5.png) no-repeat top center;
-  }
-  .wrap-sns .tab-list .tab {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    width: 56px;
-    height: 56px;
-    margin-right: 10px;
-    font-family: 'Noto DemiLight';
-    font-size: 16px;
-    color: rgba(255, 255, 255, .7);
-    text-indent: -9999px; /* 텍스트 숨김 */
-    transition: .4s;
-    padding-bottom: 30px;
-  }
-  .wrap-sns .tab-list .tab:hover {
-    background-position: bottom center;
-  }
-  
-  .main1 {
-    background: url(https://www.sungkyul.ac.kr/sites/skukr/images/main/bg-sns.jpg)
-      no-repeat center;
-    background-size: cover;
-    display: block;
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /* margin-bottom: ; */
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 200px; /* 텍스트와 해시태그 사이의 간격을 더 띄움 */
+}
+.hash-tag {
+  display: flex;
+  gap: 10px;
+}
+.hash-tag a {
+  display: inline-block;
+  padding: 7px 15px; /* 내부 여백 설정 */
+  background: #5481b9; /* 배경색 설정 */
+  border-radius: 50px; /* 모서리 둥글게 */
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
+  font-size: 18px; /* 폰트 크기 설정 */
+  color: #fff; /* 텍스트 색상 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  text-decoration: none; /* 텍스트 밑줄 제거 */
+  position: relative;
+  z-index: 1; /* z-index 설정 */
+}
+.hash-tag a p {
+  margin: 0; /* p 요소의 기본 여백 제거 */
+}
+/* 해시태그 스타일 정의 끝 */
 
+.title-and-tags {
+  display: flex;
+  align-items: center; /* 텍스트와 해시태그를 수직 중앙 정렬 */
+  gap: 20px; /* 텍스트와 해시태그 사이의 간격 */
+  margin-top: 10px; /* 제목과 해시태그 사이의 간격 추가 */
+}
 
+/* 폰트 스타일 적용 */
+.noto-sans-kr-Thin { 
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 100;
+}
+/*텍스트 스타일을 지정하는 클래스*/
+.noto-sans-kr-Medium {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+/*메인 제목을 나타내는 텍스트 스타일을 지정하는 스타일*/
+.titillium-web-regular {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+}
+/*부제목을 나타내는 텍스트 스타일을 지정하는 스타일*/
+/* 폰트 스타일 적용 끝 */
+
+/* SNS 스타일 정의 */
+.wrap-sns {
+  list-style-type: none; /*기본 목록 스타일을 제거*/
+  padding: 0; /*내부 여백을 제거*/
+  margin: 0; /*외부 여백을 제거*/
+}
+
+.wrap-sns .tab-list {
+  list-style-type: none; /* 기본 목록 스타일 제거 */
+}
+.wrap-sns .tab-list.on .youtube {
+  background-position: bottom center !important;/*!important는 이 스타일이 다른 스타일보다 우선 적용되도록 합니다*/
+}
+.wrap-sns .tab-list .tab.youtube {        /*tab-list 클래스 내부의 .tab.youtube 클래스에 대해 배경 이미지를 설정*/           
+  background: url(/images/main/ico-sns1.png) no-repeat top center;
+}
+.wrap-sns .tab-list .tab.naver {          /*tab-list 클래스 내부의 .tab.naver 클래스에 대해 배경 이미지를 설정*/
+  background: url(/images/main/ico-sns2.png) no-repeat top center;
+}
+.wrap-sns .tab-list .tab.insta {          /*tab-list 클래스 내부의 .tab.insta 클래스에 대해 배경 이미지를 설정*/
+  background: url(/images/main/ico-sns4.png) no-repeat top center;
+}
+.wrap-sns .tab-list .tab.facebook {       /*tab-list 클래스 내부의 .tab.facebook 클래스에 대해 배경 이미지를 설정*/
+  background: url(/images/main/ico-sns5.png) no-repeat top center;
+}
+
+.wrap-sns .tab-list .tab {
+  position: relative;
+  z-index: 1;     /*요소의 쌓임 순서를 설정*/
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+  font-family: 'Noto DemiLight';
+  font-size: 16px;
+  color: rgba(255, 255, 255, .7);
+  text-indent: -9999px; /* 텍스트 숨김 */
+  transition: .4s;      /*0.4초 동안의 전환 효과를 설정*/
+  padding-bottom: 30px;
+}
+
+.wrap-sns .tab-list .tab:hover {  /*.tab 요소에 마우스를 올렸을 때 배경 이미지의 위치를 변경*/
+  background-position: bottom center;
+}
+
+.main1 {
+  background: url(https://www.sungkyul.ac.kr/sites/skukr/images/main/bg-sns.jpg)
+    no-repeat center;
+  background-size: cover;
+  display: block;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* margin-bottom: ; */
+}
+/* SNS 스타일 정의 끝*/
+
+/*유튜브 스타일 정의*/
+/*밑에 전부 변경*/
 .youtubeWrap {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px; /* 간격을 줄입니다 */
-    margin: 25px 0;
-    padding: 0 10px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 30px; /* 간격을 조정합니다 */
+margin: 25px 0;
+padding: 0 10px;
 }
 
 .box1 {
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    width: 400px; /* 모든 박스의 너비를 동일하게 설정합니다 */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* 내용물을 위쪽에 정렬합니다 */
+text-align: center;
+text-decoration: none;
+color: inherit;
+width: 320px; /* 박스의 너비를 줄입니다 */
+height: 280px; /* 박스의 높이를 줄입니다 */
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start; /* 내용물을 위쪽에 정렬합니다 */
 }
 
 .someImg {
-    width: 400px;
-    height: 255px; /* 이미지의 높이를 255px로 설정합니다 */
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    object-fit: cover; /* 이미지의 비율을 유지하면서 크기를 조정합니다 */
+width: 300px; /* 이미지의 너비를 박스보다 살짝 더 넓게 설정합니다 */
+height: 150px; /* 이미지의 높이를 줄입니다 */
+border: 1px solid #ddd;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: block;
+object-fit: cover; /* 이미지의 비율을 유지하면서 크기를 조정합니다 */
+margin: 0 -10px; /* 이미지가 박스 양옆으로 튀어나오도록 설정합니다 */
 }
 
 .smbox {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(100% + 20px); /* 설명 박스가 이미지보다 넓어지도록 설정합니다 */
-    margin-top: -5px; /* 이미지와 설명 박스 사이의 간격을 없앱니다 */
-    position: relative;
-    right: -10px; /* 설명 박스를 오른쪽으로 튀어나오게 만듭니다 */
+padding: 10px;
+background-color: #fff;
+border: 1px solid #ddd;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: calc(100% - 40px); /* 설명 박스가 이미지보다 좁아지도록 설정합니다 */
+margin-top: -5px; /* 이미지와 설명 박스 사이의 간격을 없앱니다 */
+position: relative;
 }
 
-.hsboxStyle {
-    font-size: 14px; /* 폰트 크기를 조정합니다 */
-    margin-top: 5px;
-    color: #333;
+.smboxStyle {
+font-size: 17px; /* 폰트 크기를 조정합니다 */
+margin-top: 5px; /* 글씨를 박스 위쪽으로 올립니다 */
+color: #333;
+font-weight: bold; /* 글씨를 진하게 설정합니다 */
 }
 
 .youtubeBox {
-    width: 40px;
-    height: 40px;
-    background: url('https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtube.png') no-repeat center center;
-    background-size: contain;
-    margin: 0 auto 10px;
+width: 60px; /* 유튜브 로고 크기를 키웁니다 */
+height: 60px; /* 유튜브 로고 크기를 키웁니다 */
+background: url('https://www.sungkyul.ac.kr/sites/skukr/images/main/ico-youtue.png') no-repeat center center;
+background-size: contain;
+margin: 0 auto 10px;
+}
+/*유튜브 스타일 정의 끝*/
+
+/*wrap-depart 버튼 스타일*/
+.wrap-depart .control {
+display: flex; /* 플렉스 박스로 설정하여 버튼을 나란히 배치 */
+gap: 0; /* 버튼 사이의 간격을 없앰 */
 }
 
+.wrap-depart .control .prev,
+.wrap-depart .control .next {
+display: inline-block;
+width: 70px; /* 버튼의 너비 설정 */
+height: 50px; /* 버튼의 높이 설정 */
+text-indent: -9999px; /* 텍스트 숨기기 */
+overflow: hidden; /* 텍스트 숨기기 */
+border: none; /* 버튼 테두리 제거 */
+margin: 0; /* 버튼의 마진 제거 */
+padding: 0; /* 버튼의 패딩 제거 */
+}
 
-  /*소명*/
+.wrap-depart .control .prev {
+background: #252f42 url('/images/main/arrow-depart-prev.png') no-repeat center center;
+}
+
+.wrap-depart .control .next {
+background: #6c7e9f url('/images/main/arrow-depart-next.png') no-repeat center center;
+}
+/*wrap-depart 버튼 스타일 정의 끝*/
+/*소명*/

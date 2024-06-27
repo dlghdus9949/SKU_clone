@@ -353,7 +353,7 @@ let scrollInterval;
 let isPaused = false;
 
 prevBtn.addEventListener('click', () => {
-    scrollMenu.scrollBy({ left: -200, behavior: 'smooth' });
+    scrollMenu.scrollBy({ left: -200, behavior: 'smooth'});
 });
 
 nextBtn.addEventListener('click', () => {
